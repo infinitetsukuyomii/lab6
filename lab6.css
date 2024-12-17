@@ -1,0 +1,46 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+}
+.item {
+    margin: 100px;
+    text-align: center;
+    animation: moveCircle 10s linear infinite; /* Анимация кругового движения */
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(150px, 0);
+    }
+    25% {
+        transform: translate(0, 150px);
+    }
+    50% {
+        transform: translate(-150px, 0);
+    }
+    75% {
+        transform: translate(0, -150px);
+    }
+    100% {
+        transform: translate(150px, 0);
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundColorChange 10s infinite alternate;
+}
+
+@keyframes backgroundColorChange {
+    0% { background-color: #ff7e5f; }
+    25% { background-color: #feb47b; }
+    50% { background-color: #ff6a88; }
+    75% { background-color: #d66d75; }
+    100% { background-color: #d9a7c7; }
+}
